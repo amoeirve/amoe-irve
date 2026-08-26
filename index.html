@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="AMOE IRVE accompagne les entreprises, collectivités et professionnels dans leurs projets électriques, IRVE et infrastructures de recharge : conseil, AMO, AMOE, études et suivi de projets.">
+
+    <meta name="keywords"
+          content="AMOE, AMO, IRVE, conseil électrique, étude IRVE, maîtrise d'ouvrage, maîtrise d'oeuvre, infrastructure recharge électrique">
+
+    <title>AMOE IRVE | Conseil, AMO, AMOE et études techniques</title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #1f2937;
+            line-height: 1.6;
+            background: #ffffff;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+
+        .nav {
+            max-width: 1150px;
+            margin: auto;
+            padding: 18px 25px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .logo {
+            font-size: 25px;
+            font-weight: 800;
+            color: #123c69;
+        }
+
+
+        .logo span {
+            color: #f59e0b;
+        }
+
+
+        nav a {
+            margin-left: 25px;
+
+            text-decoration: none;
+
+            color: #374151;
+
+            font-weight: 600;
+        }
+
+
+        nav a:hover {
+            color: #123c69;
+        }
+
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #123c69,
+                    #1e5a91
+                );
+
+            color: white;
+
+            padding: 110px 25px;
+        }
+
+
+        .hero-content {
+            max-width: 1150px;
+            margin: auto;
+        }
+
+
+        .hero h1 {
+
+            max-width: 850px;
+
+            font-size: 52px;
+
+            line-height: 1.1;
+
+            margin-bottom: 25px;
+        }
+
+
+        .hero h1 span {
+            color: #f59e0b;
+        }
+
+
+        .hero p {
+
+            max-width: 760px;
+
+            font-size: 21px;
+
+            color: #e5edf5;
+
+            margin-bottom: 35px;
+        }
+
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+
+        .button {
+
+            display: inline-block;
+
+            padding: 15px 28px;
+
+            background: #f59e0b;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 7px;
+
+            font-weight: 700;
+        }
+
+
+        .button:hover {
+            background: #d97706;
+        }
+
+
+        .button-secondary {
+
+            display: inline-block;
+
+            padding: 15px 28px;
+
+            background: transparent;
+
+            color: white;
+
+            text-decoration: none;
+
+            border: 1px solid rgba(255,255,255,0.5);
+
+            border-radius: 7px;
+
+            font-weight: 700;
+        }
+
+
+        .button-secondary:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        section {
+            padding: 80px 25px;
+        }
+
+
+        .container {
+            max-width: 1150px;
+            margin: auto;
+        }
+
+
+        .section-title {
+
+            text-align: center;
+
+            margin-bottom: 50px;
+        }
+
+
+        .section-title h2 {
+
+            font-size: 36px;
+
+            color: #123c69;
+
+            margin-bottom: 10px;
+        }
+
+
+        .section-title p {
+            color: #6b7280;
+        }
+
+
+
+        /* =========================
+           PRESTATIONS
+        ========================= */
+
+        .services {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+
+        .card {
+
+            padding: 30px;
+
+            background: white;
+
+            border: 1px solid #e5e7eb;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 8px 25px
+                rgba(0, 0, 0, 0.05);
+        }
+
+
+        .card h3 {
+
+            color: #123c69;
+
+            font-size: 22px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .card p {
+            color: #6b7280;
+        }
+
+
+        .card strong {
+            color: #123c69;
+        }
+
+
+
+        /* =========================
+           AMO / AMOE
+        ========================= */
+
+        .amo {
+
+            background: #f8fafc;
+        }
+
+
+        .amo-content {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 50px;
+
+            align-items: center;
+        }
+
+
+        .amo-text h2 {
+
+            font-size: 36px;
+
+            color: #123c69;
+
+            margin-bottom: 20px;
+        }
+
+
+        .amo-text p {
+
+            color: #4b5563;
+
+            margin-bottom: 20px;
+        }
+
+
+        .amo-list {
+            list-style: none;
+        }
+
+
+        .amo-list li {
+
+            margin-bottom: 15px;
+
+            padding-left: 25px;
+
+            position: relative;
+
+            color: #374151;
+        }
+
+
+        .amo-list li::before {
+
+            content: "✓";
+
+            position: absolute;
+
+            left: 0;
+
+            color: #f59e0b;
+
+            font-weight: bold;
+        }
+
+
+        .amo-box {
+
+            background: #123c69;
+
+            color: white;
+
+            padding: 40px;
+
+            border-radius: 15px;
+        }
+
+
+        .amo-box h3 {
+
+            font-size: 26px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .amo-box p {
+            color: #dbeafe;
+        }
+
+
+
+        /* =========================
+           A PROPOS
+        ========================= */
+
+        .about-content {
+
+            max-width: 850px;
+
+            margin: auto;
+
+            text-align: center;
+        }
+
+
+        .about-content p {
+
+            color: #4b5563;
+
+            margin-bottom: 20px;
+        }
+
+
+
+        /* =========================
+           ZONE D'INTERVENTION
+        ========================= */
+
+        .area {
+
+            background: #f8fafc;
+
+            text-align: center;
+        }
+
+
+        .area p {
+
+            max-width: 750px;
+
+            margin: 0 auto 25px;
+
+            color: #4b5563;
+        }
+
+
+        .area strong {
+            color: #123c69;
+        }
+
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+
+            background: #123c69;
+
+            color: white;
+
+            text-align: center;
+        }
+
+
+        .contact h2 {
+
+            font-size: 36px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .contact p {
+
+            color: #dbeafe;
+
+            margin-bottom: 30px;
+        }
+
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            background: #0f2946;
+
+            color: #cbd5e1;
+
+            text-align: center;
+
+            padding: 25px;
+
+            font-size: 14px;
+        }
+
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+
+            .hero p {
+                font-size: 18px;
+            }
+
+
+            .services {
+                grid-template-columns: 1fr;
+            }
+
+
+            .amo-content {
+                grid-template-columns: 1fr;
+            }
+
+
+            nav {
+                display: none;
+            }
+
+
+            .nav {
+                justify-content: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <div class="nav">
+
+        <div class="logo">
+            AMOE <span>IRVE</span>
+        </div>
+
+
+        <nav>
+
+            <a href="#prestations">
+                Prestations
+            </a>
+
+            <a href="#amoe">
+                AMO / AMOE
+            </a>
+
+            <a href="#apropos">
+                À propos
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            Conseil, <span>AMO & AMOE</span>
+            pour vos projets électriques et IRVE
+        </h1>
+
+
+        <p>
+
+            AMOE IRVE accompagne les entreprises,
+            collectivités et professionnels dans leurs
+            projets d'infrastructures électriques et de
+            recharge pour véhicules électriques.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a
+                class="button"
+                href="#contact">
+
+                Parlons de votre projet
+
+            </a>
+
+
+            <a
+                class="button-secondary"
+                href="#prestations">
+
+                Découvrir nos prestations
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PRESTATIONS
+========================= -->
+
+<section id="prestations">
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <h2>
+                Nos prestations
+            </h2>
+
+            <p>
+                Une expertise technique pour sécuriser
+                et réussir vos projets.
+            </p>
+
+        </div>
+
+
+
+        <div class="services">
+
+
+            <div class="card">
+
+                <h3>
+                    Conseil & expertise
+                </h3>
+
+                <p>
+
+                    Analyse de vos besoins, étude des
+                    contraintes techniques et accompagnement
+                    dans vos décisions.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <h3>
+                    AMO
+                </h3>
+
+                <p>
+
+                    Assistance au maître d'ouvrage dans la
+                    définition du besoin, la consultation des
+                    entreprises, l'analyse des offres et le
+                    suivi du projet.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <h3>
+                    AMOE
+                </h3>
+
+                <p>
+
+                    Assistance à maîtrise d'œuvre pour
+                    accompagner la conception, les études
+                    techniques et le suivi de réalisation
+                    des projets.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <h3>
+                    Études électriques
+                </h3>
+
+                <p>
+
+                    Analyse des installations, dimensionnement,
+                    définition des architectures et recherche
+                    de solutions techniques adaptées.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <h3>
+                    Études IRVE
+                </h3>
+
+                <p>
+
+                    Conception et accompagnement de projets
+                    d'infrastructures de recharge pour
+                    véhicules électriques.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <h3>
+                    Audit & diagnostic
+                </h3>
+
+                <p>
+
+                    Analyse des installations existantes,
+                    identification des contraintes et
+                    recommandations d'amélioration.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     AMO / AMOE
+========================= -->
+
+<section
+    id="amoe"
+    class="amo">
+
+    <div class="container">
+
+
+        <div class="amo-content">
+
+
+            <div class="amo-text">
+
+                <h2>
+                    AMO & AMOE :
+                    un accompagnement de bout en bout
+                </h2>
+
+
+                <p>
+
+                    AMOE IRVE intervient aux côtés du maître
+                    d'ouvrage et des équipes projet afin de
+                    transformer les besoins en solutions
+                    techniques concrètes.
+
+                </p>
+
+
+                <ul class="amo-list">
+
+                    <li>
+                        Analyse et définition du besoin
+                    </li>
+
+                    <li>
+                        Études de faisabilité
+                    </li>
+
+                    <li>
+                        Définition des solutions techniques
+                    </li>
+
+                    <li>
+                        Consultation et analyse des offres
+                    </li>
+
+                    <li>
+                        Accompagnement au choix des solutions
+                    </li>
+
+                    <li>
+                        Suivi et accompagnement du projet
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <div class="amo-box">
+
+                <h3>
+                    Une vision terrain
+                </h3>
+
+
+                <p>
+
+                    Notre approche associe expertise technique,
+                    connaissance des contraintes d'exploitation
+                    et compréhension des enjeux opérationnels.
+
+                </p>
+
+
+                <br>
+
+
+                <p>
+
+                    L'objectif : apporter au maître d'ouvrage
+                    une vision claire et indépendante pour
+                    prendre les bonnes décisions.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     A PROPOS
+========================= -->
+
+<section id="apropos">
+
+    <div class="container">
+
+        <div class="about-content">
+
+
+            <div class="section-title">
+
+                <h2>
+                    À propos d'AMOE IRVE
+                </h2>
+
+            </div>
+
+
+            <p>
+
+                AMOE IRVE accompagne les entreprises,
+                collectivités et professionnels dans leurs
+                projets électriques et leurs infrastructures
+                de recharge pour véhicules électriques.
+
+            </p>
+
+
+            <p>
+
+                Notre objectif est de proposer des solutions
+                techniquement pertinentes, réalistes et
+                adaptées aux contraintes de chaque projet.
+
+            </p>
+
+
+            <p>
+
+                De l'analyse du besoin jusqu'à la réalisation,
+                nous apportons une expertise indépendante et
+                opérationnelle.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ZONE D'INTERVENTION
+========================= -->
+
+<section class="area">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+                Zone d'intervention
+            </h2>
+
+        </div>
+
+
+        <p>
+
+            AMOE IRVE intervient principalement en
+            <strong>Isère</strong>,
+            <strong>Savoie</strong>,
+            <strong>Haute-Savoie</strong> et
+            <strong>Drôme</strong>.
+
+        </p>
+
+
+        <p>
+
+            Des interventions à distance ou sur d'autres
+            secteurs peuvent également être envisagées
+            selon la nature du projet.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section
+    id="contact"
+    class="contact">
+
+    <div class="container">
+
+
+        <h2>
+            Vous avez un projet ?
+        </h2>
+
+
+        <p>
+
+            Besoin d'un conseil, d'une étude,
+            d'une AMO ou d'un accompagnement AMOE ?
+
+        </p>
+
+
+        <a
+            class="button"
+            href="mailto:contact@amoe-irve.fr">
+
+            Nous contacter
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    © 2026 AMOE IRVE —
+    Conseil, AMO, AMOE et expertise technique
+
+</footer>
+
+
+</body>
+
+</html>
+```

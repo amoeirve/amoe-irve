@@ -893,15 +893,6 @@
             }
 
 
-            .project-images {
-
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-        }
-
-
         @media (max-width: 650px) {
 
             .nav {
@@ -960,12 +951,7 @@
             }
 
 
-            .project-images {
-
-                grid-template-columns: 1fr;
-            }
-
-
+           
             .about-grid {
 
                 grid-template-columns: 1fr;
@@ -1542,10 +1528,12 @@
 
                         </p>
 
-                    </div>
-
 
                 </div>
+
+            </div>
+
+        </section>
 
 
         <!-- =====================================================

@@ -8,15 +8,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="AMOE IRVE accompagne les entreprises, collectivités et professionnels dans leurs projets électriques, IRVE et infrastructures de recharge : conseil, AMO, AMOE, études et suivi de projets.">
+          content="AMOE IRVE accompagne les entreprises, collectivités et professionnels dans leurs projets électriques, AMO, AMOE et infrastructures de recharge pour véhicules électriques.">
 
     <meta name="keywords"
-          content="AMOE, AMO, IRVE, conseil électrique, étude IRVE, maîtrise d'ouvrage, maîtrise d'oeuvre, infrastructure recharge électrique">
+          content="AMO, AMOE, IRVE, conseil électrique, études électriques, infrastructure recharge électrique, bornes de recharge">
 
-    <title>AMOE IRVE | Conseil, AMO, AMOE et études techniques</title>
+    <title>AMOE IRVE | Conseil, AMO, AMOE et études électriques</title>
 
 
     <style>
+
+        /* =========================================================
+           VARIABLES
+        ========================================================= */
+
+        :root {
+
+            --background: #0b1120;
+            --background-light: #111827;
+            --card: #151e2e;
+
+            --blue: #1f5fa8;
+            --blue-light: #2f75c5;
+
+            --orange: #f59e0b;
+            --orange-light: #fbbf24;
+
+            --white: #ffffff;
+            --text: #e5e7eb;
+            --text-light: #aab4c3;
+
+            --border: rgba(255,255,255,0.10);
+
+        }
+
+
+        /* =========================================================
+           RESET
+        ========================================================= */
 
         * {
             margin: 0;
@@ -31,130 +60,254 @@
 
 
         body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #f8fafc;
-    line-height: 1.6;
-    background: #0f172a;
-}
 
-        /* =========================
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background: var(--background);
+
+            color: var(--text);
+
+            line-height: 1.6;
+
+        }
+
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        .container {
+
+            width: 90%;
+            max-width: 1150px;
+
+            margin: auto;
+
+        }
+
+
+        /* =========================================================
            HEADER
-        ========================= */
+        ========================================================= */
 
-       header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: #111827;
-    border-bottom: 1px solid #334155;
+        header {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            background: rgba(11,17,32,0.96);
+
+            backdrop-filter: blur(10px);
+
+            border-bottom: 1px solid var(--border);
+
+        }
 
 
         .nav {
-            max-width: 1150px;
-            margin: auto;
-            padding: 18px 25px;
+
+            min-height: 72px;
 
             display: flex;
-            justify-content: space-between;
+
             align-items: center;
+
+            justify-content: space-between;
+
         }
 
+
+        /* LOGO */
 
         .logo {
+
             font-size: 25px;
+
             font-weight: 800;
-            color: #123c69;
+
+            letter-spacing: -0.5px;
+
         }
 
 
-        .logo span {
-            color: #f59e0b;
+        .logo .amoe {
+
+            color: var(--blue-light);
+
+        }
+
+
+        .logo .irve {
+
+            color: var(--orange);
+
+        }
+
+
+        /* MENU */
+
+        nav ul {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 35px;
+
+            list-style: none;
+
         }
 
 
         nav a {
-            margin-left: 25px;
 
-            text-decoration: none;
+            color: #cbd5e1;
 
-            color: #374151;
+            font-size: 15px;
 
             font-weight: 600;
+
+            transition: 0.25s;
+
         }
 
 
         nav a:hover {
-            color: #123c69;
+
+            color: var(--orange);
+
         }
 
 
-
-        /* =========================
+        /* =========================================================
            HERO
-        ========================= */
+        ========================================================= */
 
-    .hero {
-    background: #111827;
-    color: white;
-    padding: 80px 25px;
-}
+        .hero {
+
+            background:
+
+                radial-gradient(
+                    circle at 80% 20%,
+                    rgba(31,95,168,0.18),
+                    transparent 35%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #0b1120,
+                    #101827
+                );
+
+            padding: 90px 0;
+
+        }
 
 
-    .hero-content {
-    max-width: 1150px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 50px;
-}
+        .hero-content {
 
-.hero-image {
-    grid-column: 2;
-    grid-row: 1 / span 3;
-}
+            display: grid;
 
-.hero-image img {
-    width: 100%;
-    max-width: 520px;
-    height: auto;
-    border-radius: 15px;
-    display: block;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-}
+            grid-template-columns: 1fr 1fr;
+
+            align-items: center;
+
+            gap: 65px;
+
+        }
+
+
+        .hero-text {
+
+            order: 1;
+
+        }
+
+
+        .hero-image {
+
+            order: 2;
+
+        }
+
+
+        .hero-image img {
+
+            width: 100%;
+
+            max-width: 560px;
+
+            margin-left: auto;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 20px 50px rgba(0,0,0,0.45);
+
+            border: 1px solid rgba(255,255,255,0.08);
+
+        }
+
+
         .hero h1 {
-
-            max-width: 850px;
 
             font-size: 52px;
 
             line-height: 1.1;
 
             margin-bottom: 25px;
+
+            color: var(--white);
+
         }
 
 
         .hero h1 span {
-            color: #f59e0b;
+
+            color: var(--orange);
+
         }
 
 
         .hero p {
 
-            max-width: 760px;
+            color: var(--text-light);
 
-            font-size: 21px;
+            font-size: 19px;
 
-            color: #e5edf5;
+            max-width: 650px;
 
-            margin-bottom: 35px;
+            margin-bottom: 30px;
+
         }
 
 
-        .hero-buttons {
+        /* =========================================================
+           BOUTONS
+        ========================================================= */
+
+        .buttons {
+
             display: flex;
+
             gap: 15px;
+
             flex-wrap: wrap;
+
         }
 
 
@@ -162,63 +315,61 @@
 
             display: inline-block;
 
-            padding: 15px 28px;
-
-            background: #f59e0b;
-
-            color: white;
-
-            text-decoration: none;
+            padding: 13px 24px;
 
             border-radius: 7px;
 
             font-weight: 700;
+
+            transition: 0.25s;
+
         }
 
 
-        .button:hover {
-            background: #d97706;
+        .button-primary {
+
+            background: var(--orange);
+
+            color: #111827;
+
+        }
+
+
+        .button-primary:hover {
+
+            background: var(--orange-light);
+
+            transform: translateY(-2px);
+
         }
 
 
         .button-secondary {
 
-            display: inline-block;
+            border: 1px solid rgba(255,255,255,0.25);
 
-            padding: 15px 28px;
+            color: var(--white);
 
-            background: transparent;
-
-            color: white;
-
-            text-decoration: none;
-
-            border: 1px solid rgba(255,255,255,0.5);
-
-            border-radius: 7px;
-
-            font-weight: 700;
         }
 
 
         .button-secondary:hover {
-            background: rgba(255,255,255,0.1);
+
+            border-color: var(--orange);
+
+            color: var(--orange);
+
         }
 
 
-
-        /* =========================
+        /* =========================================================
            SECTIONS
-        ========================= */
+        ========================================================= */
 
         section {
-            padding: 80px 25px;
-        }
 
+            padding: 90px 0;
 
-        .container {
-            max-width: 1150px;
-            margin: auto;
         }
 
 
@@ -226,7 +377,8 @@
 
             text-align: center;
 
-            margin-bottom: 50px;
+            margin-bottom: 55px;
+
         }
 
 
@@ -234,21 +386,41 @@
 
             font-size: 36px;
 
-            color: #ffffff;
+            color: var(--white);
 
             margin-bottom: 10px;
+
+        }
+
+
+        .section-title h2 span {
+
+            color: var(--orange);
+
         }
 
 
         .section-title p {
-            color: #b8c0cc;
+
+            color: var(--text-light);
+
+            max-width: 700px;
+
+            margin: auto;
+
         }
 
 
-
-        /* =========================
+        /* =========================================================
            PRESTATIONS
-        ========================= */
+        ========================================================= */
+
+        #prestations {
+
+            background: var(--background-light);
+
+        }
+
 
         .services {
 
@@ -258,105 +430,172 @@
                 repeat(3, 1fr);
 
             gap: 25px;
+
         }
 
 
         .card {
 
-            padding: 30px;
+            background: var(--card);
 
-            background: #111827
+            border: 1px solid var(--border);
 
-           border: 1px solid #1f2937;
+            border-radius: 14px;
 
-            border-radius: 12px;
+            padding: 32px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .card:hover {
+
+            transform: translateY(-6px);
+
+            border-color:
+                rgba(245,158,11,0.45);
 
             box-shadow:
-                0 8px 25px
-                rgba(0, 0, 0, 0.05);
+                0 15px 35px rgba(0,0,0,0.25);
+
+        }
+
+
+        .card-icon {
+
+            width: 48px;
+
+            height: 48px;
+
+            border-radius: 10px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background:
+                rgba(31,95,168,0.18);
+
+            color: var(--blue-light);
+
+            font-size: 22px;
+
+            font-weight: bold;
+
+            margin-bottom: 20px;
+
         }
 
 
         .card h3 {
 
-            color: #123c69;
+            color: var(--white);
 
-            font-size: 22px;
+            font-size: 21px;
 
-            margin-bottom: 15px;
+            margin-bottom: 12px;
+
+        }
+
+
+        .card h3 span {
+
+            color: var(--orange);
+
         }
 
 
         .card p {
-            color: #6b7280;
+
+            color: var(--text-light);
+
+            font-size: 15px;
+
         }
 
 
-        .card strong {
-            color: #123c69;
-        }
-
-
-
-        /* =========================
+        /* =========================================================
            AMO / AMOE
-        ========================= */
+        ========================================================= */
 
-        .amo {
-
-            background: #f8fafc;
-        }
-
-
-        .amo-content {
+        .about-grid {
 
             display: grid;
 
             grid-template-columns:
-                1fr 1fr;
+                repeat(2, 1fr);
 
-            gap: 50px;
+            gap: 30px;
 
-            align-items: center;
         }
 
 
-        .amo-text h2 {
+        .about-box {
 
-            font-size: 36px;
+            background: var(--card);
 
-            color: #123c69;
+            border: 1px solid var(--border);
 
-            margin-bottom: 20px;
+            border-radius: 14px;
+
+            padding: 35px;
+
         }
 
 
-        .amo-text p {
+        .about-box h3 {
 
-            color: #4b5563;
+            color: var(--white);
 
-            margin-bottom: 20px;
-        }
-
-
-        .amo-list {
-            list-style: none;
-        }
-
-
-        .amo-list li {
+            font-size: 25px;
 
             margin-bottom: 15px;
 
-            padding-left: 25px;
-
-            position: relative;
-
-            color: #374151;
         }
 
 
-        .amo-list li::before {
+        .about-box h3 span {
+
+            color: var(--orange);
+
+        }
+
+
+        .about-box p {
+
+            color: var(--text-light);
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .about-box ul {
+
+            list-style: none;
+
+            margin-top: 20px;
+
+        }
+
+
+        .about-box li {
+
+            color: var(--text);
+
+            margin-bottom: 10px;
+
+            padding-left: 22px;
+
+            position: relative;
+
+        }
+
+
+        .about-box li::before {
 
             content: "✓";
 
@@ -364,41 +603,23 @@
 
             left: 0;
 
-            color: #f59e0b;
+            color: var(--orange);
 
             font-weight: bold;
+
         }
 
 
-        .amo-box {
+        /* =========================================================
+           À PROPOS
+        ========================================================= */
 
-            background: #123c69;
+        #apropos {
 
-            color: white;
+            background: var(--background-light);
 
-            padding: 40px;
-
-            border-radius: 15px;
         }
 
-
-        .amo-box h3 {
-
-            font-size: 26px;
-
-            margin-bottom: 20px;
-        }
-
-
-        .amo-box p {
-            color: #dbeafe;
-        }
-
-
-
-        /* =========================
-           A PROPOS
-        ========================= */
 
         .about-content {
 
@@ -407,129 +628,262 @@
             margin: auto;
 
             text-align: center;
+
         }
 
 
         .about-content p {
 
-            color: #4b5563;
+            color: var(--text-light);
+
+            font-size: 17px;
 
             margin-bottom: 20px;
+
         }
 
 
+        .highlight {
 
-        /* =========================
-           ZONE D'INTERVENTION
-        ========================= */
+            color: var(--orange);
 
-        .area {
+            font-weight: bold;
 
-            background: #f8fafc;
-
-            text-align: center;
         }
 
 
-        .area p {
-
-            max-width: 750px;
-
-            margin: 0 auto 25px;
-
-            color: #4b5563;
-        }
-
-
-        .area strong {
-            color: #123c69;
-        }
-
-
-
-        /* =========================
+        /* =========================================================
            CONTACT
-        ========================= */
+        ========================================================= */
 
-        .contact {
+        .contact-box {
 
-            background: #123c69;
+            max-width: 850px;
 
-            color: white;
+            margin: auto;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    rgba(31,95,168,0.20),
+                    rgba(245,158,11,0.08)
+                );
+
+            border: 1px solid var(--border);
+
+            border-radius: 18px;
+
+            padding: 55px;
 
             text-align: center;
+
         }
 
 
-        .contact h2 {
+        .contact-box h2 {
+
+            color: var(--white);
 
             font-size: 36px;
 
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+
         }
 
 
-        .contact p {
+        .contact-box p {
 
-            color: #dbeafe;
+            color: var(--text-light);
 
-            margin-bottom: 30px;
+            margin-bottom: 25px;
+
         }
 
 
+        .email {
 
-        /* =========================
+            display: inline-block;
+
+            color: var(--orange);
+
+            font-size: 20px;
+
+            font-weight: bold;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .email:hover {
+
+            color: var(--orange-light);
+
+        }
+
+
+        /* =========================================================
            FOOTER
-        ========================= */
+        ========================================================= */
 
         footer {
 
-            background: #0f2946;
+            background: #070c16;
 
-            color: #cbd5e1;
+            border-top: 1px solid var(--border);
+
+            padding: 30px 0;
 
             text-align: center;
 
-            padding: 25px;
-
-            font-size: 14px;
         }
 
 
+        footer p {
 
-        /* =========================
-           MOBILE
-        ========================= */
+            color: #7f8a9a;
 
-        @media (max-width: 850px) {
+            font-size: 14px;
 
-            .hero h1 {
-                font-size: 40px;
+        }
+
+
+        footer strong {
+
+            color: var(--blue-light);
+
+        }
+
+
+        footer span {
+
+            color: var(--orange);
+
+        }
+
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media (max-width: 900px) {
+
+            nav ul {
+
+                gap: 18px;
+
             }
 
 
-            .hero p {
-                font-size: 18px;
+            .hero-content {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .hero-text {
+
+                order: 1;
+
+            }
+
+
+            .hero-image {
+
+                order: 2;
+
+            }
+
+
+            .hero h1 {
+
+                font-size: 42px;
+
             }
 
 
             .services {
-                grid-template-columns: 1fr;
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
             }
 
-
-            .amo-content {
-                grid-template-columns: 1fr;
-            }
+        }
 
 
-            nav {
-                display: none;
-            }
-
+        @media (max-width: 650px) {
 
             .nav {
+
+                flex-direction: column;
+
+                gap: 15px;
+
+                padding: 18px 0;
+
+            }
+
+
+            nav ul {
+
+                gap: 15px;
+
+                flex-wrap: wrap;
+
                 justify-content: center;
+
+            }
+
+
+            .hero {
+
+                padding: 60px 0;
+
+            }
+
+
+            .hero h1 {
+
+                font-size: 36px;
+
+            }
+
+
+            .hero p {
+
+                font-size: 17px;
+
+            }
+
+
+            .services {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .about-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .contact-box {
+
+                padding: 35px 20px;
+
+            }
+
+
+            .contact-box h2 {
+
+                font-size: 29px;
+
             }
 
         }
@@ -539,505 +893,564 @@
 </head>
 
 
-
 <body>
 
 
-<!-- =========================
-     HEADER
-========================= -->
+    <!-- =========================================================
+         HEADER
+    ========================================================= -->
 
-<header>
+    <header>
 
-    <div class="nav">
+        <div class="container nav">
 
-        <div class="logo">
-            AMOE <span>IRVE</span>
-        </div>
+            <a href="#accueil" class="logo">
 
-
-        <nav>
-
-            <a href="#prestations">
-                Prestations
-            </a>
-
-            <a href="#amoe">
-                AMO / AMOE
-            </a>
-
-            <a href="#apropos">
-                À propos
-            </a>
-
-            <a href="#contact">
-                Contact
-            </a>
-
-        </nav>
-
-    </div>
-
-</header>
-
-
-
-<main>
-
-
-<!-- =========================
-     HERO
-========================= -->
-
-<section class="hero">
-
-    <div class="hero-content">
-
-        <div class="hero-image">
-    <img src="borne+irve.jpg" alt="Infrastructure de recharge IRVE">
-</div>
-        <h1>
-            Conseil, <span>AMO & AMOE</span>
-            pour vos projets électriques et IRVE
-        </h1>
-
-
-        <p>
-
-            Nous accompagnons les entreprises,
-            collectivités et professionnels dans leurs
-            projets de rénovation de bâtiment et leurs infrastructures
-            de recharge pour véhicules électriques.
-
-
-        </p>
-
-
-        <div class="hero-buttons">
-
-            <a
-                class="button"
-                href="#contact">
-
-                Parlons de votre projet
+                <span class="amoe">AMOE</span>
+                <span class="irve">IRVE</span>
 
             </a>
 
 
-            <a
-                class="button-secondary"
-                href="#prestations">
+            <nav>
 
-                Découvrir nos prestations
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     PRESTATIONS
-========================= -->
-
-<section id="prestations">
-
-    <div class="container">
-
-
-        <div class="section-title">
-
-            <h2>
-                Nos prestations
-            </h2>
-
-            <p>
-                Une expertise technique pour sécuriser
-                et réussir vos projets.
-            </p>
-
-        </div>
-
-
-
-        <div class="services">
-
-
-            <div class="card">
-
-                <h3>
-                    Conseil & expertise
-                </h3>
-
-                <p>
-
-                    Analyse de vos besoins, étude des
-                    contraintes techniques et accompagnement
-                    dans vos décisions.
-
-                </p>
-
-            </div>
-
-
-
-            <div class="card">
-
-                <h3>
-                    AMO
-                </h3>
-
-                <p>
-
-                    Assistance au maître d'ouvrage électrique dans la
-                    définition du besoin, la consultation des
-                    entreprises, l'analyse des offres et le
-                    suivi du projet.
-
-                </p>
-
-            </div>
-
-
-
-            <div class="card">
-
-                <h3>
-                    AMOE
-                </h3>
-
-                <p>
-
-                    Assistance à maîtrise d'œuvre pour
-                    accompagner la conception, les études
-                    techniques et le suivi de réalisation
-                    des projets.
-
-                </p>
-
-            </div>
-
-
-
-            <div class="card">
-
-                <h3>
-                    Études électriques
-                </h3>
-
-                <p>
-
-                    Analyse des installations, dimensionnement,
-                    définition des architectures et recherche
-                    de solutions techniques adaptées.
-
-                </p>
-
-            </div>
-
-
-
-            <div class="card">
-
-                <h3>
-                    Études IRVE
-                </h3>
-
-                <p>
-
-                    Conception et accompagnement de projets
-                    d'infrastructures de recharge pour
-                    véhicules électriques.
-
-                </p>
-
-            </div>
-
-
-
-            <div class="card">
-
-                <h3>
-                    Audit & diagnostic
-                </h3>
-
-                <p>
-
-                    Analyse des installations existantes,
-                    identification des contraintes et
-                    recommandations d'amélioration.
-
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     AMO / AMOE
-========================= -->
-
-<section
-    id="amoe"
-    class="amo">
-
-    <div class="container">
-
-
-        <div class="amo-content">
-
-
-            <div class="amo-text">
-
-                <h2>
-                    AMO & AMOE :
-                    un accompagnement de bout en bout
-                </h2>
-
-
-                <p>
-
-                    AMOE IRVE intervient aux côtés du maître
-                    d'ouvrage et des équipes projet afin de
-                    transformer les besoins en solutions
-                    techniques concrètes.
-
-                </p>
-
-
-                <ul class="amo-list">
+                <ul>
 
                     <li>
-                        Analyse et définition du besoin
+                        <a href="#prestations">
+                            Prestations
+                        </a>
                     </li>
 
                     <li>
-                        Études de faisabilité
+                        <a href="#amo">
+                            AMO / AMOE
+                        </a>
                     </li>
 
                     <li>
-                        Définition des solutions techniques
+                        <a href="#apropos">
+                            À propos
+                        </a>
                     </li>
 
                     <li>
-                        Consultation et analyse des offres
-                    </li>
-
-                    <li>
-                        Accompagnement au choix des solutions
-                    </li>
-
-                    <li>
-                        Suivi et accompagnement du projet
+                        <a href="#contact">
+                            Contact
+                        </a>
                     </li>
 
                 </ul>
 
-            </div>
-
-
-
-            <div class="amo-box">
-
-                <h3>
-                    Une vision terrain
-                </h3>
-
-
-                <p>
-
-                    Notre approche associe expertise technique,
-                    connaissance des contraintes d'exploitation
-                    et compréhension des enjeux opérationnels.
-
-                </p>
-
-
-                <br>
-
-
-                <p>
-
-                    L'objectif : apporter au maître d'ouvrage
-                    une vision claire et indépendante pour
-                    prendre les bonnes décisions.
-
-                </p>
-
-            </div>
-
+            </nav>
 
         </div>
 
-    </div>
-
-</section>
+    </header>
 
 
 
-<!-- =========================
-     A PROPOS
-========================= -->
+    <!-- =========================================================
+         HERO
+    ========================================================= -->
 
-<section id="apropos">
+    <main id="accueil">
 
-    <div class="container">
+        <section class="hero">
 
-        <div class="about-content">
+            <div class="container hero-content">
 
 
-            <div class="section-title">
+                <div class="hero-text">
 
-                <h2>
-                    À propos d'AMOE IRVE
-                </h2>
+                    <h1>
+
+                        Conseil,
+
+                        <span>AMO & AMOE</span>
+
+                        pour vos projets
+                        électriques et IRVE
+
+                    </h1>
+
+
+                    <p>
+
+                        AMOE IRVE accompagne les entreprises,
+                        collectivités et professionnels dans leurs
+                        projets électriques, de rénovation de bâtiment
+                        et d'infrastructures de recharge pour véhicules
+                        électriques.
+
+                    </p>
+
+
+                    <div class="buttons">
+
+                        <a
+                            href="#contact"
+                            class="button button-primary">
+
+                            Parlons de votre projet
+
+                        </a>
+
+
+                        <a
+                            href="#prestations"
+                            class="button button-secondary">
+
+                            Découvrir nos prestations
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="hero-image">
+
+                    <img
+                        src="borne+irve.jpg"
+                        alt="Infrastructure de recharge IRVE">
+
+                </div>
+
 
             </div>
 
+        </section>
+
+
+
+        <!-- =====================================================
+             PRESTATIONS
+        ====================================================== -->
+
+        <section id="prestations">
+
+            <div class="container">
+
+
+                <div class="section-title">
+
+                    <h2>
+                        Nos <span>prestations</span>
+                    </h2>
+
+                    <p>
+                        Une expertise technique pour sécuriser,
+                        piloter et réussir vos projets électriques.
+                    </p>
+
+                </div>
+
+
+
+                <div class="services">
+
+
+                    <div class="card">
+
+                        <div class="card-icon">
+                            01
+                        </div>
+
+                        <h3>
+                            Conseil <span>& expertise</span>
+                        </h3>
+
+                        <p>
+
+                            Analyse de vos besoins, étude des
+                            contraintes techniques et accompagnement
+                            dans vos décisions.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="card">
+
+                        <div class="card-icon">
+                            02
+                        </div>
+
+                        <h3>
+                            <span>AMO</span>
+                        </h3>
+
+                        <p>
+
+                            Assistance au maître d'ouvrage électrique
+                            dans la définition du besoin, la consultation
+                            des entreprises, l'analyse des offres et
+                            le suivi du projet.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="card">
+
+                        <div class="card-icon">
+                            03
+                        </div>
+
+                        <h3>
+                            <span>AMOE</span>
+                        </h3>
+
+                        <p>
+
+                            Assistance à maîtrise d'œuvre pour accompagner
+                            la conception, les études techniques et le
+                            suivi de réalisation des projets.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="card">
+
+                        <div class="card-icon">
+                            04
+                        </div>
+
+                        <h3>
+                            Études <span>électriques</span>
+                        </h3>
+
+                        <p>
+
+                            Analyse technique des installations,
+                            dimensionnement, études de faisabilité
+                            et accompagnement dans la réalisation
+                            de vos projets.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="card">
+
+                        <div class="card-icon">
+                            05
+                        </div>
+
+                        <h3>
+                            Projets <span>IRVE</span>
+                        </h3>
+
+                        <p>
+
+                            Accompagnement des projets d'infrastructures
+                            de recharge pour véhicules électriques,
+                            de l'étude du besoin jusqu'au suivi
+                            de réalisation.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="card">
+
+                        <div class="card-icon">
+                            06
+                        </div>
+
+                        <h3>
+                            Suivi <span>de projet</span>
+                        </h3>
+
+                        <p>
+
+                            Coordination, suivi des entreprises,
+                            contrôle de l'avancement et accompagnement
+                            jusqu'à la mise en service.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             AMO / AMOE
+        ====================================================== -->
+
+        <section id="amo">
+
+            <div class="container">
+
+
+                <div class="section-title">
+
+                    <h2>
+                        AMO <span>&</span> AMOE
+                    </h2>
+
+                    <p>
+                        Un accompagnement adapté à chaque étape
+                        de votre projet.
+                    </p>
+
+                </div>
+
+
+
+                <div class="about-grid">
+
+
+                    <div class="about-box">
+
+                        <h3>
+                            <span>AMO</span> — Maîtrise d'ouvrage
+                        </h3>
+
+                        <p>
+
+                            Vous avez un projet mais souhaitez être
+                            accompagné dans sa définition et son pilotage ?
+
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                Définition du besoin
+                            </li>
+
+                            <li>
+                                Analyse des contraintes techniques
+                            </li>
+
+                            <li>
+                                Consultation des entreprises
+                            </li>
+
+                            <li>
+                                Analyse des offres
+                            </li>
+
+                            <li>
+                                Suivi du projet
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+
+                    <div class="about-box">
+
+                        <h3>
+                            <span>AMOE</span> — Maîtrise d'œuvre
+                        </h3>
+
+                        <p>
+
+                            Vous avez besoin d'une expertise technique
+                            pour concevoir et suivre la réalisation
+                            de votre projet ?
+
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                Études techniques
+                            </li>
+
+                            <li>
+                                Analyse des solutions
+                            </li>
+
+                            <li>
+                                Assistance à la conception
+                            </li>
+
+                            <li>
+                                Suivi des travaux
+                            </li>
+
+                            <li>
+                                Coordination technique
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             À PROPOS
+        ====================================================== -->
+
+        <section id="apropos">
+
+            <div class="container">
+
+
+                <div class="section-title">
+
+                    <h2>
+                        À <span>propos</span>
+                    </h2>
+
+                </div>
+
+
+                <div class="about-content">
+
+                    <p>
+
+                        <span class="highlight">
+                            AMOE IRVE
+                        </span>
+                        accompagne les entreprises, collectivités
+                        et professionnels dans leurs projets
+                        électriques et leurs infrastructures
+                        de recharge pour véhicules électriques.
+
+                    </p>
+
+
+                    <p>
+
+                        Notre objectif est simple :
+                        apporter une expertise technique indépendante,
+                        faciliter les prises de décision et sécuriser
+                        la réalisation des projets.
+
+                    </p>
+
+
+                    <p>
+
+                        De l'analyse du besoin au suivi de réalisation,
+                        nous intervenons comme un véritable partenaire
+                        technique de votre projet.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CONTACT
+        ====================================================== -->
+
+        <section id="contact">
+
+            <div class="container">
+
+
+                <div class="contact-box">
+
+                    <h2>
+                        Parlons de votre projet
+                    </h2>
+
+
+                    <p>
+
+                        Vous avez un projet électrique,
+                        une infrastructure IRVE ou besoin
+                        d'un accompagnement technique ?
+
+                    </p>
+
+
+                    <a
+                        class="email"
+                        href="mailto:amoe-irve@gmail.com">
+
+                        amoe-irve@gmail.com
+
+                    </a>
+
+
+                    <br>
+
+
+                    <a
+                        href="mailto:amoe-irve@gmail.com"
+                        class="button button-primary">
+
+                        Nous contacter
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================= -->
+
+    <footer>
+
+        <div class="container">
 
             <p>
 
-                Nous accompagnons les entreprises,
-                collectivités et professionnels dans leurs
-                projets de rénovation de bâtiment et leurs infrastructures
-                de recharge pour véhicules électriques.
+                © 2026
 
-            </p>
+                <strong>AMOE</strong>
+                <span>IRVE</span>
 
-
-            <p>
-
-                Notre objectif est de proposer des solutions
-                techniquement pertinentes, réalistes et
-                adaptées aux contraintes de chaque projet.
-
-            </p>
-
-
-            <p>
-
-                De l'analyse du besoin jusqu'à la réalisation,
-                nous apportons une expertise indépendante et
-                opérationnelle.
+                — Conseil, AMO, AMOE et études électriques
 
             </p>
 
         </div>
 
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     ZONE D'INTERVENTION
-========================= -->
-
-<section class="area">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <h2>
-                Zone d'intervention
-            </h2>
-
-        </div>
-
-
-        <p>
-
-            AMOE IRVE intervient principalement en
-            <strong>Isère</strong>,
-            <strong>Savoie</strong>,
-            <strong>Haute-Savoie</strong> et
-            <strong>Drôme</strong>.
-
-        </p>
-
-
-        <p>
-
-            Des interventions à distance ou sur d'autres
-            secteurs peuvent également être envisagées
-            selon la nature du projet.
-
-        </p>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     CONTACT
-========================= -->
-
-<section
-    id="contact"
-    class="contact">
-
-    <div class="container">
-
-
-        <h2>
-            Vous avez un projet ?
-        </h2>
-
-
-        <p>
-
-            Besoin d'un conseil, d'une étude,
-            d'une AMO ou d'un accompagnement AMOE ?
-
-        </p>
-
-
-        <a
-            class="button"
-            href="mailto:amoe.irve@gmail.com">
-
-            Nous contacter
-
-        </a>
-
-
-    </div>
-
-</section>
-
-
-</main>
-
-
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer>
-
-    © 2026 AMOE IRVE —
-    Conseil, AMO, AMOE et expertise technique
-
-</footer>
+    </footer>
 
 
 </body>
 
 </html>
-```

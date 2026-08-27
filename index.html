@@ -110,12 +110,28 @@
         }
 
 
-        .hero-content {
-            max-width: 1150px;
-            margin: auto;
-        }
+    .hero-content {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+}
 
+.hero-image {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+}
 
+.hero-image img {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    border-radius: 15px;
+    display: block;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
         .hero h1 {
 
             max-width: 850px;
@@ -587,6 +603,9 @@
 
     <div class="hero-content">
 
+        <div class="hero-image">
+    <img src="borne+irve.jpg" alt="Infrastructure de recharge IRVE">
+</div>
         <h1>
             Conseil, <span>AMO & AMOE</span>
             pour vos projets électriques et IRVE

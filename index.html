@@ -8,12 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="AMOE IRVE accompagne les entreprises, collectivités et professionnels dans leurs projets électriques, AMO, AMOE et infrastructures de recharge pour véhicules électriques.">
+          content="AMOE IRVE - Conseil, AMO et AMOE pour vos projets électriques, bâtiments collectifs, rénovation et infrastructures de recharge pour véhicules électriques.">
 
-    <meta name="keywords"
-          content="AMO, AMOE, IRVE, conseil électrique, études électriques, infrastructure recharge électrique, bornes de recharge">
-
-    <title>AMOE IRVE | Conseil, AMO, AMOE et études électriques</title>
+    <title>AMOE IRVE | Conseil, AMO & AMOE</title>
 
 
     <style>
@@ -25,11 +22,13 @@
         :root {
 
             --background: #0b1120;
-            --background-light: #111827;
-            --card: #151e2e;
+            --background-light: #101827;
 
-            --blue: #1f5fa8;
-            --blue-light: #2f75c5;
+            --card: #151e2e;
+            --card-light: #192437;
+
+            --blue: #2563a6;
+            --blue-light: #3b82c4;
 
             --orange: #f59e0b;
             --orange-light: #fbbf24;
@@ -90,6 +89,7 @@
         .container {
 
             width: 90%;
+
             max-width: 1150px;
 
             margin: auto;
@@ -109,11 +109,13 @@
 
             z-index: 1000;
 
-            background: rgba(11,17,32,0.96);
+            background:
+                rgba(11,17,32,0.96);
 
             backdrop-filter: blur(10px);
 
-            border-bottom: 1px solid var(--border);
+            border-bottom:
+                1px solid var(--border);
 
         }
 
@@ -131,8 +133,6 @@
         }
 
 
-        /* LOGO */
-
         .logo {
 
             font-size: 25px;
@@ -145,20 +145,14 @@
 
 
         .logo .amoe {
-
             color: var(--blue-light);
-
         }
 
 
         .logo .irve {
-
             color: var(--orange);
-
         }
 
-
-        /* MENU */
 
         nav ul {
 
@@ -166,7 +160,7 @@
 
             align-items: center;
 
-            gap: 35px;
+            gap: 32px;
 
             list-style: none;
 
@@ -202,15 +196,15 @@
             background:
 
                 radial-gradient(
-                    circle at 80% 20%,
-                    rgba(31,95,168,0.18),
+                    circle at 85% 20%,
+                    rgba(37,99,166,0.22),
                     transparent 35%
                 ),
 
                 linear-gradient(
                     135deg,
                     #0b1120,
-                    #101827
+                    #111827
                 );
 
             padding: 90px 0;
@@ -222,11 +216,12 @@
 
             display: grid;
 
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns:
+                1fr 1fr;
 
             align-items: center;
 
-            gap: 65px;
+            gap: 60px;
 
         }
 
@@ -255,10 +250,11 @@
 
             border-radius: 18px;
 
+            border:
+                1px solid rgba(255,255,255,0.10);
+
             box-shadow:
                 0 20px 50px rgba(0,0,0,0.45);
-
-            border: 1px solid rgba(255,255,255,0.08);
 
         }
 
@@ -269,9 +265,9 @@
 
             line-height: 1.1;
 
-            margin-bottom: 25px;
-
             color: var(--white);
+
+            margin-bottom: 25px;
 
         }
 
@@ -296,10 +292,6 @@
         }
 
 
-        /* =========================================================
-           BOUTONS
-        ========================================================= */
-
         .buttons {
 
             display: flex;
@@ -310,6 +302,10 @@
 
         }
 
+
+        /* =========================================================
+           BOUTONS
+        ========================================================= */
 
         .button {
 
@@ -346,7 +342,8 @@
 
         .button-secondary {
 
-            border: 1px solid rgba(255,255,255,0.25);
+            border:
+                1px solid rgba(255,255,255,0.25);
 
             color: var(--white);
 
@@ -404,7 +401,7 @@
 
             color: var(--text-light);
 
-            max-width: 700px;
+            max-width: 750px;
 
             margin: auto;
 
@@ -412,17 +409,17 @@
 
 
         /* =========================================================
-           PRESTATIONS
+           DOMAINES D'INTERVENTION
         ========================================================= */
 
-        #prestations {
+        #domaines {
 
             background: var(--background-light);
 
         }
 
 
-        .services {
+        .domains {
 
             display: grid;
 
@@ -434,22 +431,23 @@
         }
 
 
-        .card {
+        .domain-card {
 
             background: var(--card);
 
-            border: 1px solid var(--border);
+            border:
+                1px solid var(--border);
 
             border-radius: 14px;
 
-            padding: 32px;
+            overflow: hidden;
 
             transition: 0.3s;
 
         }
 
 
-        .card:hover {
+        .domain-card:hover {
 
             transform: translateY(-6px);
 
@@ -458,6 +456,133 @@
 
             box-shadow:
                 0 15px 35px rgba(0,0,0,0.25);
+
+        }
+
+
+        .domain-image {
+
+            height: 220px;
+
+            overflow: hidden;
+
+        }
+
+
+        .domain-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: 0.4s;
+
+        }
+
+
+        .domain-card:hover .domain-image img {
+
+            transform: scale(1.04);
+
+        }
+
+
+        .domain-content {
+
+            padding: 28px;
+
+        }
+
+
+        .domain-number {
+
+            color: var(--orange);
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .domain-content h3 {
+
+            color: var(--white);
+
+            font-size: 23px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .domain-content h3 span {
+
+            color: var(--orange);
+
+        }
+
+
+        .domain-content p {
+
+            color: var(--text-light);
+
+            font-size: 15px;
+
+        }
+
+
+        /* =========================================================
+           PRESTATIONS
+        ========================================================= */
+
+        #prestations {
+
+            background: var(--background);
+
+        }
+
+
+        .services {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 22px;
+
+        }
+
+
+        .card {
+
+            background: var(--card);
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 14px;
+
+            padding: 30px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .card:hover {
+
+            transform: translateY(-5px);
+
+            border-color:
+                rgba(37,99,166,0.65);
 
         }
 
@@ -477,11 +602,11 @@
             justify-content: center;
 
             background:
-                rgba(31,95,168,0.18);
+                rgba(37,99,166,0.18);
 
             color: var(--blue-light);
 
-            font-size: 22px;
+            font-size: 15px;
 
             font-weight: bold;
 
@@ -494,7 +619,7 @@
 
             color: var(--white);
 
-            font-size: 21px;
+            font-size: 20px;
 
             margin-bottom: 12px;
 
@@ -521,6 +646,13 @@
            AMO / AMOE
         ========================================================= */
 
+        #amo {
+
+            background: var(--background-light);
+
+        }
+
+
         .about-grid {
 
             display: grid;
@@ -537,7 +669,8 @@
 
             background: var(--card);
 
-            border: 1px solid var(--border);
+            border:
+                1px solid var(--border);
 
             border-radius: 14px;
 
@@ -616,18 +749,36 @@
 
         #apropos {
 
-            background: var(--background-light);
+            background: var(--background);
 
         }
 
 
         .about-content {
 
-            max-width: 850px;
+            max-width: 900px;
 
             margin: auto;
 
             text-align: center;
+
+        }
+
+
+        .about-content h3 {
+
+            color: var(--white);
+
+            font-size: 30px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .about-content h3 span {
+
+            color: var(--orange);
 
         }
 
@@ -656,6 +807,13 @@
            CONTACT
         ========================================================= */
 
+        #contact {
+
+            background: var(--background-light);
+
+        }
+
+
         .contact-box {
 
             max-width: 850px;
@@ -666,11 +824,12 @@
 
                 linear-gradient(
                     135deg,
-                    rgba(31,95,168,0.20),
+                    rgba(37,99,166,0.20),
                     rgba(245,158,11,0.08)
                 );
 
-            border: 1px solid var(--border);
+            border:
+                1px solid var(--border);
 
             border-radius: 18px;
 
@@ -731,7 +890,8 @@
 
             background: #070c16;
 
-            border-top: 1px solid var(--border);
+            border-top:
+                1px solid var(--border);
 
             padding: 30px 0;
 
@@ -764,7 +924,7 @@
 
 
         /* =========================================================
-           RESPONSIVE
+           RESPONSIVE TABLETTE
         ========================================================= */
 
         @media (max-width: 900px) {
@@ -797,9 +957,24 @@
             }
 
 
+            .hero-image img {
+
+                margin: auto;
+
+            }
+
+
             .hero h1 {
 
                 font-size: 42px;
+
+            }
+
+
+            .domains {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
 
             }
 
@@ -813,6 +988,10 @@
 
         }
 
+
+        /* =========================================================
+           RESPONSIVE MOBILE
+        ========================================================= */
 
         @media (max-width: 650px) {
 
@@ -829,7 +1008,7 @@
 
             nav ul {
 
-                gap: 15px;
+                gap: 14px;
 
                 flex-wrap: wrap;
 
@@ -855,6 +1034,13 @@
             .hero p {
 
                 font-size: 17px;
+
+            }
+
+
+            .domains {
+
+                grid-template-columns: 1fr;
 
             }
 
@@ -917,6 +1103,12 @@
                 <ul>
 
                     <li>
+                        <a href="#domaines">
+                            Domaines
+                        </a>
+                    </li>
+
+                    <li>
                         <a href="#prestations">
                             Prestations
                         </a>
@@ -956,6 +1148,7 @@
 
     <main id="accueil">
 
+
         <section class="hero">
 
             <div class="container hero-content">
@@ -970,18 +1163,18 @@
                         <span>AMO & AMOE</span>
 
                         pour vos projets
-                        électriques et IRVE
+                        électriques, bâtiments et IRVE
 
                     </h1>
 
 
                     <p>
 
-                        AMOE IRVE accompagne les entreprises,
+                        J'accompagne les entreprises,
                         collectivités et professionnels dans leurs
-                        projets électriques, de rénovation de bâtiment
-                        et d'infrastructures de recharge pour véhicules
-                        électriques.
+                        projets électriques, la rénovation des
+                        bâtiments collectifs et les infrastructures
+                        de recharge pour véhicules électriques.
 
                     </p>
 
@@ -998,10 +1191,10 @@
 
 
                         <a
-                            href="#prestations"
+                            href="#domaines"
                             class="button button-secondary">
 
-                            Découvrir nos prestations
+                            Découvrir nos domaines
 
                         </a>
 
@@ -1027,6 +1220,163 @@
 
 
         <!-- =====================================================
+             DOMAINES D'INTERVENTION
+        ====================================================== -->
+
+        <section id="domaines">
+
+            <div class="container">
+
+
+                <div class="section-title">
+
+                    <h2>
+                        Nos <span>domaines d'intervention</span>
+                    </h2>
+
+                    <p>
+
+                        Une expertise technique au service
+                        de vos projets électriques, de rénovation
+                        et d'infrastructures de recharge.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="domains">
+
+
+                    <!-- BÂTIMENTS -->
+
+                    <div class="domain-card">
+
+                        <div class="domain-image">
+
+                            <img
+                                src="batiment-renovation.jpg"
+                                alt="Rénovation d'un bâtiment collectif">
+
+                        </div>
+
+
+                        <div class="domain-content">
+
+                            <div class="domain-number">
+                                01 — BÂTIMENTS
+                            </div>
+
+
+                            <h3>
+                                Bâtiments collectifs
+                                <span>& rénovation</span>
+                            </h3>
+
+
+                            <p>
+
+                                Accompagnement des projets de
+                                rénovation électrique des bâtiments
+                                collectifs, copropriétés et installations
+                                existantes.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ÉLECTRICITÉ -->
+
+                    <div class="domain-card">
+
+                        <div class="domain-image">
+
+                            <img
+                                src="etude-electrique.jpg"
+                                alt="Étude et projet électrique">
+
+                        </div>
+
+
+                        <div class="domain-content">
+
+                            <div class="domain-number">
+                                02 — ÉLECTRICITÉ
+                            </div>
+
+
+                            <h3>
+                                Projets <span>électriques</span>
+                            </h3>
+
+
+                            <p>
+
+                                Études, analyse des installations,
+                                faisabilité technique et accompagnement
+                                des projets électriques.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- IRVE -->
+
+                    <div class="domain-card">
+
+                        <div class="domain-image">
+
+                            <img
+                                src="borne+irve.jpg"
+                                alt="Infrastructure de recharge IRVE">
+
+                        </div>
+
+
+                        <div class="domain-content">
+
+                            <div class="domain-number">
+                                03 — IRVE
+                            </div>
+
+
+                            <h3>
+                                Infrastructures
+                                <span>IRVE</span>
+                            </h3>
+
+
+                            <p>
+
+                                Accompagnement des projets de recharge
+                                pour véhicules électriques, de l'étude
+                                du besoin jusqu'au suivi de réalisation.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
              PRESTATIONS
         ====================================================== -->
 
@@ -1042,8 +1392,10 @@
                     </h2>
 
                     <p>
-                        Une expertise technique pour sécuriser,
-                        piloter et réussir vos projets électriques.
+
+                        Un accompagnement technique et opérationnel
+                        adapté à chaque étape de votre projet.
+
                     </p>
 
                 </div>
@@ -1067,7 +1419,7 @@
 
                             Analyse de vos besoins, étude des
                             contraintes techniques et accompagnement
-                            dans vos décisions.
+                            dans vos prises de décision.
 
                         </p>
 
@@ -1087,10 +1439,10 @@
 
                         <p>
 
-                            Assistance au maître d'ouvrage électrique
-                            dans la définition du besoin, la consultation
-                            des entreprises, l'analyse des offres et
-                            le suivi du projet.
+                            Assistance au maître d'ouvrage dans
+                            la définition du besoin, la consultation
+                            des entreprises, l'analyse des offres
+                            et le pilotage du projet.
 
                         </p>
 
@@ -1110,9 +1462,9 @@
 
                         <p>
 
-                            Assistance à maîtrise d'œuvre pour accompagner
-                            la conception, les études techniques et le
-                            suivi de réalisation des projets.
+                            Assistance à maîtrise d'œuvre pour
+                            accompagner la conception, les études
+                            techniques et le suivi de réalisation.
 
                         </p>
 
@@ -1133,9 +1485,8 @@
                         <p>
 
                             Analyse technique des installations,
-                            dimensionnement, études de faisabilité
-                            et accompagnement dans la réalisation
-                            de vos projets.
+                            études de faisabilité, dimensionnement
+                            et accompagnement des solutions.
 
                         </p>
 
@@ -1155,10 +1506,9 @@
 
                         <p>
 
-                            Accompagnement des projets d'infrastructures
+                            Accompagnement des infrastructures
                             de recharge pour véhicules électriques,
-                            de l'étude du besoin jusqu'au suivi
-                            de réalisation.
+                            de l'étude du besoin au suivi des travaux.
 
                         </p>
 
@@ -1180,7 +1530,7 @@
 
                             Coordination, suivi des entreprises,
                             contrôle de l'avancement et accompagnement
-                            jusqu'à la mise en service.
+                            jusqu'à la réalisation.
 
                         </p>
 
@@ -1207,12 +1557,14 @@
                 <div class="section-title">
 
                     <h2>
-                        AMO <span>&</span> AMOE
+                        <span>AMO</span> & AMOE
                     </h2>
 
                     <p>
-                        Un accompagnement adapté à chaque étape
-                        de votre projet.
+
+                        Deux modes d'accompagnement pour répondre
+                        précisément aux besoins de votre projet.
+
                     </p>
 
                 </div>
@@ -1222,18 +1574,25 @@
                 <div class="about-grid">
 
 
+                    <!-- AMO -->
+
                     <div class="about-box">
 
                         <h3>
-                            <span>AMO</span> — Maîtrise d'ouvrage
+                            <span>AMO</span>
+                            — Assistance à maîtrise d'ouvrage
                         </h3>
+
 
                         <p>
 
-                            Vous avez un projet mais souhaitez être
-                            accompagné dans sa définition et son pilotage ?
+                            Vous êtes maître d'ouvrage et souhaitez
+                            être accompagné dans la définition,
+                            la consultation et le pilotage de votre
+                            projet ?
 
                         </p>
+
 
                         <ul>
 
@@ -1246,6 +1605,10 @@
                             </li>
 
                             <li>
+                                Élaboration des solutions
+                            </li>
+
+                            <li>
                                 Consultation des entreprises
                             </li>
 
@@ -1254,7 +1617,7 @@
                             </li>
 
                             <li>
-                                Suivi du projet
+                                Suivi et pilotage du projet
                             </li>
 
                         </ul>
@@ -1263,19 +1626,24 @@
 
 
 
+                    <!-- AMOE -->
+
                     <div class="about-box">
 
                         <h3>
-                            <span>AMOE</span> — Maîtrise d'œuvre
+                            <span>AMOE</span>
+                            — Assistance à maîtrise d'œuvre
                         </h3>
+
 
                         <p>
 
                             Vous avez besoin d'une expertise technique
-                            pour concevoir et suivre la réalisation
-                            de votre projet ?
+                            pour concevoir, préparer et suivre
+                            la réalisation de votre projet ?
 
                         </p>
+
 
                         <ul>
 
@@ -1289,6 +1657,10 @@
 
                             <li>
                                 Assistance à la conception
+                            </li>
+
+                            <li>
+                                Analyse technique des offres
                             </li>
 
                             <li>
@@ -1316,43 +1688,68 @@
              À PROPOS
         ====================================================== -->
 
-     <section id="apropos">
+        <section id="apropos">
 
-    <div class="container">
+            <div class="container">
 
-        <div class="section-title">
-            <h2>À <span>propos</span></h2>
-        </div>
 
-        <div class="about-content">
+                <div class="section-title">
 
-            
-            <p>
-                Consultant indépendant en électricité,
-                AMO et AMOE, spécialisé dans l'accompagnement
-                des projets électriques, de rénovation de 
-                bâtiment et d'infrastructures de recharge pour 
-                véhicules électriques.
-            </p>
+                    <h2>
+                        À <span>propos</span>
+                    </h2>
 
-            <p>
-                Fort de plusieurs années d'expérience dans le
-                domaine de l'électricité et de l'exploitation
-                des réseaux, nous accompagnons les entreprises,
-                collectivités et professionnels dans leurs projets.
-            </p>
+                </div>
 
-            <p>
-                Notre objectif : apporter une expertise technique
-                indépendante, faciliter les prises de décision
-                et sécuriser la réalisation des projets.
-            </p>
 
-        </div>
+                <div class="about-content">
 
-    </div>
 
-</section>
+                    <h3>
+                        GALVEZ Eddy
+                    </h3>
+
+
+                    <p>
+
+                        Consultant indépendant en électricité,
+                        <span class="highlight">
+                            AMO et AMOE
+                        </span>,
+                        spécialisé dans l'accompagnement des projets
+                        électriques, de rénovation de bâtiments
+                        collectifs et d'infrastructures de recharge
+                        pour véhicules électriques.
+
+                    </p>
+
+
+                    <p>
+
+                        Fort de plusieurs années d'expérience dans
+                        le domaine de l'électricité et de l'exploitation
+                        des réseaux, j'accompagne les entreprises,
+                        collectivités et professionnels dans leurs projets.
+
+                    </p>
+
+
+                    <p>
+
+                        Mon objectif est d'apporter une expertise
+                        technique indépendante, de faciliter les prises
+                        de décision et de contribuer à sécuriser
+                        la réalisation de vos projets.
+
+                    </p>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
 
 
         <!-- =====================================================
@@ -1366,6 +1763,7 @@
 
                 <div class="contact-box">
 
+
                     <h2>
                         Parlons de votre projet
                     </h2>
@@ -1374,8 +1772,9 @@
                     <p>
 
                         Vous avez un projet électrique,
+                        un bâtiment collectif à rénover,
                         une infrastructure IRVE ou besoin
-                        d'un accompagnement technique ?
+                        d'un accompagnement AMO / AMOE ?
 
                     </p>
 
@@ -1399,6 +1798,7 @@
                         Nous contacter
 
                     </a>
+
 
                 </div>
 
@@ -1426,7 +1826,7 @@
                 <strong>AMOE</strong>
                 <span>IRVE</span>
 
-                — GALVEZ Eddy - Consultant indépendant
+                — GALVEZ Eddy — Consultant indépendant
 
             </p>
 
